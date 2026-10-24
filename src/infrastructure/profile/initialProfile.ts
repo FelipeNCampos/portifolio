@@ -43,11 +43,11 @@ export const initialProfile = {
       technologies: 'Python · Django · API REST' },
   ],
   skills: [
-    { category: 'Backend', values: ['Python', 'Go', 'Java', 'FastAPI', 'Django', 'Swagger', 'Gin'] },
+    { category: 'Backend', values: ['Python', 'Go', 'Java', 'FastAPI', 'Django', 'AWS SDK/CLI'] },
     { category: 'Frontend', values: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
-    { category: 'Automação', values: ['Selenium', 'Regex', 'n8n', 'Web scraping'] },
-    { category: 'Dados', values: ['Pandas', 'SQLAlchemy', 'Pydantic', 'Google Sheets'] },
-    { category: 'Infraestrutura', values: ['Docker', 'GitFlow', 'Git/GitHub', 'Linux'] },
-    { category: 'Metodologias', values: ['Kanban', 'Metodologias ágeis'] },
+    { category: 'Automação', values: ['Selenium', 'Scrapy', 'n8n', 'AWS Lambda'] },
+    { category: 'Dados', values: ['Postgresql', 'MongoDB', 'Pandas', 'SQL'] },
+    { category: 'Infraestrutura', values: ['Docker', 'Kafka', 'Git/GitHub', 'Linux', 'AWS EC2/VPC/S3'] },
+    { category: 'Metodologias', values: ['ISO 9001', 'ISO/IEC 12207'] },
   ],
 } as const
