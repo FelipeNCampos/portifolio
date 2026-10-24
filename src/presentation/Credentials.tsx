@@ -26,6 +26,7 @@ export function CredentialCollection({ items }: { items: Credential[] }) {
       {featured.map(item => <article className="featured-credential" key={item.id}>
         <div><h3>{item.title}</h3><p>{item.issuer}</p>{completionLabel(item) && <p className="credential-meta">{completionLabel(item)}</p>}<EvidenceLinks item={item} /></div>
         {item.id === 'cloud-practitioner' && <img className="credential-badge" src={publicAssetUrl('/credentials/aws-cloud-practitioner-badge.png')} alt="Selo de treinamento AWS SimuLearn Cloud Practitioner" width="92" height="92" loading="lazy" decoding="async" />}
+        {item.id === 'harvard-cs50' && <img className="credential-badge" src={publicAssetUrl('/credentials/harvard-logo.png')} alt="Logo da Universidade Harvard" width="92" height="92" loading="lazy" decoding="async" />}
       </article>)}
     </div>
     {remaining.length > 0 && <details className="more-content credential-archive" open>

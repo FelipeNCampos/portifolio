@@ -44,6 +44,8 @@ Para adicionar um certificado, copie o comprovante para `public/credentials`, cr
 
 Os 19 registros incluem treinamentos AWS, Harvard CS50 e cursos Python, com os 18 arquivos fornecidos. Treinamentos e questões de prática AWS não representam aprovação em exame de certificação. Datas, carga horária ou links não fornecidos não são inventados.
 
+A logo de Harvard no destaque CS50 é uma cópia local da [imagem do site oficial da universidade](https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192), servida junto ao frontend.
+
 ## Repositórios GitHub
 
 O navegador consulta diretamente a API pública do GitHub para o perfil configurado em `initialProfile.github`, sem autenticação e sem gravar dados. São considerados até os 100 repositórios mais recentemente atualizados por push, excluindo forks, privados, arquivados e o README do próprio perfil. Os projetos do currículo permanecem independentes dessa lista.
