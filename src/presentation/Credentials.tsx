@@ -1,6 +1,6 @@
-import { usePublicResource } from './usePublicResource'
 import type { Credential } from '../domain/publicPortfolio'
-import { loadCredentials } from '../infrastructure/publicPortfolioApi'
+import { publishedCredentials } from '../infrastructure/publishedCredentials'
+import { publicAssetUrl } from '../infrastructure/publicAssetUrl'
 import { ExternalArrow } from './ExternalArrow'
 import { SectionIntro } from './SectionIntro'
 
@@ -12,8 +12,8 @@ function completionLabel(item: Credential) {
 
 function EvidenceLinks({ item }: { item: Credential }) {
   return <div className="evidence-links">
-    {item.evidence ? <a className="text-link" href={item.evidence} target="_blank" rel="noopener noreferrer" aria-label={`${item.evidenceLabel}: ${item.title}`}>{item.id === 'harvard-cs50' ? 'Ver documento' : 'Ver comprovante'} <ExternalArrow /></a> : <span className="source-note">Comprovante não disponibilizado.</span>}
-    {item.verificationUrl && <a className="text-link" href={item.verificationUrl} target="_blank" rel="noopener noreferrer" aria-label={`Validar credencial: ${item.title}`}>Validar credencial <ExternalArrow /></a>}
+    {item.evidence ? <a className="text-link" href={publicAssetUrl(item.evidence)} target="_blank" rel="noopener noreferrer" aria-label={`${item.evidenceLabel}: ${item.title}`}>{item.id === 'harvard-cs50' ? 'Ver documento' : 'Ver comprovante'} <ExternalArrow /></a> : <span className="source-note">Comprovante não disponibilizado.</span>}
+    {item.verificationUrl && <a className="text-link" href={publicAssetUrl(item.verificationUrl)} target="_blank" rel="noopener noreferrer" aria-label={`Validar credencial: ${item.title}`}>Validar credencial <ExternalArrow /></a>}
   </div>
 }
 
@@ -25,7 +25,7 @@ export function CredentialCollection({ items }: { items: Credential[] }) {
     <div className="featured-credentials">
       {featured.map(item => <article className="featured-credential" key={item.id}>
         <div><h3>{item.title}</h3><p>{item.issuer}</p>{completionLabel(item) && <p className="credential-meta">{completionLabel(item)}</p>}<EvidenceLinks item={item} /></div>
-        {item.id === 'cloud-practitioner' && <img className="credential-badge" src="/credentials/aws-cloud-practitioner-badge.png" alt="Selo de treinamento AWS SimuLearn Cloud Practitioner" width="92" height="92" loading="lazy" decoding="async" />}
+        {item.id === 'cloud-practitioner' && <img className="credential-badge" src={publicAssetUrl('/credentials/aws-cloud-practitioner-badge.png')} alt="Selo de treinamento AWS SimuLearn Cloud Practitioner" width="92" height="92" loading="lazy" decoding="async" />}
       </article>)}
     </div>
     {remaining.length > 0 && <details className="more-content credential-archive" open>
@@ -36,14 +36,11 @@ export function CredentialCollection({ items }: { items: Credential[] }) {
 }
 
 export function Credentials() {
-  const { state, retry } = usePublicResource(loadCredentials)
   return <section className="content-section credentials-section" id="certificados" aria-labelledby="credentials-title">
     <SectionIntro>
       <header className="section-heading"><h2 id="credentials-title">Certificados e<br />treinamentos.</h2><p>Cursos e treinamentos em cloud, programação e ciência da computação, com acesso aos documentos fornecidos.</p></header>
     </SectionIntro>
     <p className="credential-context">AWS SimuLearn e o conjunto de questões DVA-C02 são treinamentos concluídos, não aprovação em exames AWS Certified. Os Mundos Python usam a captura de conclusão fornecida do Curso em Vídeo.</p>
-    {state.status === 'loading' && <p className="resource-notice" role="status">Carregando certificados publicados…</p>}
-    {state.status === 'error' && <div className="resource-notice" role="status"><p>Não foi possível carregar os certificados. Verifique se a API está disponível e tente novamente.</p><button className="text-link" onClick={retry}>Tentar novamente</button></div>}
-    {state.status === 'ready' && (state.data.length ? <CredentialCollection items={state.data} /> : <p className="resource-notice">Nenhum certificado publicado no momento.</p>)}
+    {publishedCredentials.length ? <CredentialCollection items={publishedCredentials} /> : <p className="resource-notice">Nenhum certificado publicado no momento.</p>}
   </section>
 }

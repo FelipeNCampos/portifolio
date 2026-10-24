@@ -18,7 +18,7 @@ export interface GithubRepository {
 }
 
 export interface GithubProjects {
-  status: 'live' | 'cached' | 'stale' | 'unavailable'
+  status: 'live' | 'unavailable'
   profileUrl: string
   updatedAt: string | null
   repositories: GithubRepository[]

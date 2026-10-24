@@ -5,4 +5,10 @@ __pycache__/
 .venv/
 backend/data/
 .env
+.env.*
+!.env.example
+.aws-sam/
+samconfig.toml
+*.pem
+*.key
 *.tsbuildinfo

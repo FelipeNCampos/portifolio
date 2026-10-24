@@ -1,11 +1,9 @@
 import { defineConfig, loadEnv } from 'vite'
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', 'API_PROXY_')
+  const env = loadEnv(mode, '.', 'VITE_BASE_PATH')
   return {
-  server: {
-    port: 4173,
-    proxy: { '/api': env.API_PROXY_TARGET || 'http://127.0.0.1:8000' },
-  },
+    base: env.VITE_BASE_PATH || (mode === 'production' ? '/portifolio/' : '/'),
+    server: { port: 4173 },
   }
 })

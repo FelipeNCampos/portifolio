@@ -1,7 +1,7 @@
 import { usePublicResource } from './usePublicResource'
 import { ExternalArrow } from './ExternalArrow'
 import { initialProfile } from '../infrastructure/profile/initialProfile'
-import { loadGithubProjects } from '../infrastructure/publicPortfolioApi'
+import { loadGithubProjects } from '../infrastructure/githubProjects'
 import type { GithubRepository } from '../domain/publicPortfolio'
 import { SectionIntro } from './SectionIntro'
 
@@ -29,7 +29,6 @@ function GithubWork() {
     {state.status === 'loading' && <p className="resource-notice" role="status">Carregando repositórios do GitHub…</p>}
     {unavailable && <div className="resource-notice" role="status"><p>Não foi possível consultar o GitHub agora. Você ainda pode acessar o perfil diretamente.</p><button className="text-link" onClick={retry}>Tentar novamente</button></div>}
     {state.status === 'ready' && state.data.status !== 'unavailable' && <>
-      {state.data.status === 'stale' && <p className="resource-notice" role="status">GitHub temporariamente indisponível. Exibindo a última consulta salva.</p>}
       {state.data.repositories.length === 0 ? <p className="resource-notice">Nenhum repositório público próprio disponível nesta consulta.</p> : <>
         <RepositoryList repositories={state.data.repositories.slice(0, 6)} />
         {state.data.repositories.length > 6 && <details className="more-content"><summary>Ver mais {state.data.repositories.length - 6} repositórios</summary><RepositoryList repositories={state.data.repositories.slice(6)} /></details>}

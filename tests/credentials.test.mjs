@@ -5,7 +5,7 @@ import { createServer } from 'vite'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 
-const seed = JSON.parse(await readFile(new URL('../backend/infrastructure/credential_seed.json', import.meta.url), 'utf8'))
+const seed = JSON.parse(await readFile(new URL('../src/infrastructure/profile/credentials.json', import.meta.url), 'utf8'))
 
 test('main section titles share centered alignment without centering descriptions', async () => {
   const css = await readFile(new URL('../src/presentation/content.css', import.meta.url), 'utf8')
