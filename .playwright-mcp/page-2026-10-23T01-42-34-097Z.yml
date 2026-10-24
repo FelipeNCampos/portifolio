@@ -1,0 +1,327 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - navigation "Principal" [ref=e5]:
+      - link "Projetos" [ref=e6] [cursor=pointer]:
+        - /url: /portifolio/projetos
+      - link "Serviços" [ref=e7] [cursor=pointer]:
+        - /url: /portifolio/servicos
+    - link "Mars Webdesigner, início" [ref=e8] [cursor=pointer]:
+      - /url: /portifolio
+    - navigation "Secundário" [ref=e9]:
+      - link "Sobre" [ref=e10] [cursor=pointer]:
+        - /url: /portifolio/sobre
+      - link "Orçamento" [ref=e11] [cursor=pointer]:
+        - /url: /portifolio/contato
+    - generic [aria-hidden]:
+      - link:
+        - /url: /portifolio
+        - text: Início
+      - link:
+        - /url: /portifolio/projetos
+        - text: Projetos
+      - link:
+        - /url: /portifolio/servicos
+        - text: Serviços
+      - link:
+        - /url: /portifolio/sobre
+        - text: Sobre
+      - link:
+        - /url: /portifolio/contato
+        - text: Orçamento
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: Portfólio · 32 projetos
+      - heading "Projetos" [level=1] [ref=e15]
+      - paragraph [ref=e17]: Cada página nasce de um conceito. Abra um projeto para ver o desafio, a abordagem e o que foi entregue.
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - button [pressed] [ref=e20] [cursor=pointer]:
+          - text: Todos
+          - superscript [ref=e21]: "32"
+        - button [ref=e22] [cursor=pointer]:
+          - text: Site institucional
+          - superscript [ref=e23]: "6"
+        - button [ref=e24] [cursor=pointer]:
+          - text: Site oficial
+          - superscript [ref=e25]: "1"
+        - button [ref=e26] [cursor=pointer]:
+          - text: Site 3D
+          - superscript [ref=e27]: "1"
+        - button [ref=e28] [cursor=pointer]:
+          - text: Site de produto
+          - superscript [ref=e29]: "2"
+        - button [ref=e30] [cursor=pointer]:
+          - text: Landing page
+          - superscript [ref=e31]: "9"
+        - button [ref=e32] [cursor=pointer]:
+          - text: Página de vendas
+          - superscript [ref=e33]: "8"
+        - button [ref=e34] [cursor=pointer]:
+          - text: Página de captura
+          - superscript [ref=e35]: "3"
+        - button [ref=e36] [cursor=pointer]:
+          - text: Protótipo
+          - superscript [ref=e37]: "1"
+        - button [ref=e38] [cursor=pointer]:
+          - text: Advertorial
+          - superscript [ref=e39]: "1"
+      - generic [ref=e40]:
+        - link "Página Pinfer Metalúrgica Destaque · ao vivo 01 Pinfer Metalúrgica Site institucional" [ref=e42] [cursor=pointer]:
+          - /url: /portifolio/projetos/pinfer
+          - generic [ref=e43]:
+            - img "Página Pinfer Metalúrgica" [ref=e44]
+            - generic [ref=e45]: Destaque · ao vivo
+          - generic [ref=e47]:
+            - generic [ref=e48]: "01"
+            - heading "Pinfer Metalúrgica" [level=3] [ref=e49]
+            - generic [ref=e50]: Site institucional
+        - link "Página Podpah Funkbol Clube Destaque · ao vivo 02 Podpah Funkbol Clube Site oficial" [ref=e52] [cursor=pointer]:
+          - /url: /portifolio/projetos/podpahfunkbol
+          - generic [ref=e53]:
+            - img "Página Podpah Funkbol Clube" [ref=e54]
+            - generic [ref=e55]: Destaque · ao vivo
+          - generic [ref=e57]:
+            - generic [ref=e58]: "02"
+            - heading "Podpah Funkbol Clube" [level=3] [ref=e59]
+            - generic [ref=e60]: Site oficial
+        - link "Página Swaparoo Destaque · ao vivo 03 Swaparoo Site 3D" [ref=e62] [cursor=pointer]:
+          - /url: /portifolio/projetos/swaparoo
+          - generic [ref=e63]:
+            - img "Página Swaparoo" [ref=e64]
+            - generic [ref=e65]: Destaque · ao vivo
+          - generic [ref=e67]:
+            - generic [ref=e68]: "03"
+            - heading "Swaparoo" [level=3] [ref=e69]
+            - generic [ref=e70]: Site 3D
+        - link "Página Via Turbo Destaque · ao vivo 04 Via Turbo Site institucional" [ref=e72] [cursor=pointer]:
+          - /url: /portifolio/projetos/viaturbo
+          - generic [ref=e73]:
+            - img "Página Via Turbo" [ref=e74]
+            - generic [ref=e75]: Destaque · ao vivo
+          - generic [ref=e77]:
+            - generic [ref=e78]: "04"
+            - heading "Via Turbo" [level=3] [ref=e79]
+            - generic [ref=e80]: Site institucional
+        - link "Página MAIS Card Destaque · ao vivo 05 MAIS Card Site de produto" [ref=e82] [cursor=pointer]:
+          - /url: /portifolio/projetos/soumaiscard
+          - generic [ref=e83]:
+            - img "Página MAIS Card" [ref=e84]
+            - generic [ref=e85]: Destaque · ao vivo
+          - generic [ref=e87]:
+            - generic [ref=e88]: "05"
+            - heading "MAIS Card" [level=3] [ref=e89]
+            - generic [ref=e90]: Site de produto
+        - link "Página Avocado Tech 06 Avocado Tech Landing page" [ref=e92] [cursor=pointer]:
+          - /url: /portifolio/projetos/avocadotech
+          - img "Página Avocado Tech" [ref=e94]
+          - generic [ref=e95]:
+            - generic [ref=e96]: "06"
+            - heading "Avocado Tech" [level=3] [ref=e97]
+            - generic [ref=e98]: Landing page
+        - link "Página Curso de presença masculina 07 Curso de presença masculina Página de vendas" [ref=e100] [cursor=pointer]:
+          - /url: /portifolio/projetos/euvanessita
+          - img "Página Curso de presença masculina" [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]: "07"
+            - heading "Curso de presença masculina" [level=3] [ref=e105]
+            - generic [ref=e106]: Página de vendas
+        - link "Página Comunidade de tráfego pago 08 Comunidade de tráfego pago Página de vendas" [ref=e108] [cursor=pointer]:
+          - /url: /portifolio/projetos/pedro-sobral
+          - img "Página Comunidade de tráfego pago" [ref=e110]
+          - generic [ref=e111]:
+            - generic [ref=e112]: "08"
+            - heading "Comunidade de tráfego pago" [level=3] [ref=e113]
+            - generic [ref=e114]: Página de vendas
+        - link "Página Automação com IA 09 Automação com IA Site institucional" [ref=e116] [cursor=pointer]:
+          - /url: /portifolio/projetos/desktop-home
+          - img "Página Automação com IA" [ref=e118]
+          - generic [ref=e119]:
+            - generic [ref=e120]: "09"
+            - heading "Automação com IA" [level=3] [ref=e121]
+            - generic [ref=e122]: Site institucional
+        - link "Página Coleção tennis 10 Coleção tennis Landing page" [ref=e124] [cursor=pointer]:
+          - /url: /portifolio/projetos/wendel-love
+          - img "Página Coleção tennis" [ref=e126]
+          - generic [ref=e127]:
+            - generic [ref=e128]: "10"
+            - heading "Coleção tennis" [level=3] [ref=e129]
+            - generic [ref=e130]: Landing page
+        - link "Página Cartões e milhas 11 Cartões e milhas Página de captura" [ref=e132] [cursor=pointer]:
+          - /url: /portifolio/projetos/milheiro-black
+          - img "Página Cartões e milhas" [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: "11"
+            - heading "Cartões e milhas" [level=3] [ref=e137]
+            - generic [ref=e138]: Página de captura
+        - link "Página Mente em evolução 12 Mente em evolução Página de vendas" [ref=e140] [cursor=pointer]:
+          - /url: /portifolio/projetos/dr-guerra
+          - img "Página Mente em evolução" [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e144]: "12"
+            - heading "Mente em evolução" [level=3] [ref=e145]
+            - generic [ref=e146]: Página de vendas
+        - link "Página Nature Ambiental 13 Nature Ambiental Site institucional" [ref=e148] [cursor=pointer]:
+          - /url: /portifolio/projetos/nature-ambiental
+          - img "Página Nature Ambiental" [ref=e150]
+          - generic [ref=e151]:
+            - generic [ref=e152]: "13"
+            - heading "Nature Ambiental" [level=3] [ref=e153]
+            - generic [ref=e154]: Site institucional
+        - link "Página Império Web 14 Império Web Landing page" [ref=e156] [cursor=pointer]:
+          - /url: /portifolio/projetos/lp-imperio
+          - img "Página Império Web" [ref=e158]
+          - generic [ref=e159]:
+            - generic [ref=e160]: "14"
+            - heading "Império Web" [level=3] [ref=e161]
+            - generic [ref=e162]: Landing page
+        - link "Página Assessoria de marketing local 15 Assessoria de marketing local Protótipo" [ref=e164] [cursor=pointer]:
+          - /url: /portifolio/projetos/startscale
+          - img "Página Assessoria de marketing local" [ref=e166]
+          - generic [ref=e167]:
+            - generic [ref=e168]: "15"
+            - heading "Assessoria de marketing local" [level=3] [ref=e169]
+            - generic [ref=e170]: Protótipo
+        - link "Página Gestão de milhas 16 Gestão de milhas Página de vendas" [ref=e172] [cursor=pointer]:
+          - /url: /portifolio/projetos/page-gestao
+          - img "Página Gestão de milhas" [ref=e174]
+          - generic [ref=e175]:
+            - generic [ref=e176]: "16"
+            - heading "Gestão de milhas" [level=3] [ref=e177]
+            - generic [ref=e178]: Página de vendas
+        - link "Página Box Slams 17 Box Slams Landing page" [ref=e180] [cursor=pointer]:
+          - /url: /portifolio/projetos/boxslams
+          - img "Página Box Slams" [ref=e182]
+          - generic [ref=e183]:
+            - generic [ref=e184]: "17"
+            - heading "Box Slams" [level=3] [ref=e185]
+            - generic [ref=e186]: Landing page
+        - link "Página Mente ativa 18 Mente ativa Landing page" [ref=e188] [cursor=pointer]:
+          - /url: /portifolio/projetos/lp-joel-jota
+          - img "Página Mente ativa" [ref=e190]
+          - generic [ref=e191]:
+            - generic [ref=e192]: "18"
+            - heading "Mente ativa" [level=3] [ref=e193]
+            - generic [ref=e194]: Landing page
+        - link "Página Mesa de operações 19 Mesa de operações Landing page" [ref=e196] [cursor=pointer]:
+          - /url: /portifolio/projetos/wide-desktop
+          - img "Página Mesa de operações" [ref=e198]
+          - generic [ref=e199]:
+            - generic [ref=e200]: "19"
+            - heading "Mesa de operações" [level=3] [ref=e201]
+            - generic [ref=e202]: Landing page
+        - link "Página Curso de maquiagem 20 Curso de maquiagem Página de vendas" [ref=e204] [cursor=pointer]:
+          - /url: /portifolio/projetos/lp-curso
+          - img "Página Curso de maquiagem" [ref=e206]
+          - generic [ref=e207]:
+            - generic [ref=e208]: "20"
+            - heading "Curso de maquiagem" [level=3] [ref=e209]
+            - generic [ref=e210]: Página de vendas
+        - link "Página Offy 21 Offy Site de produto" [ref=e212] [cursor=pointer]:
+          - /url: /portifolio/projetos/offy
+          - img "Página Offy" [ref=e214]
+          - generic [ref=e215]:
+            - generic [ref=e216]: "21"
+            - heading "Offy" [level=3] [ref=e217]
+            - generic [ref=e218]: Site de produto
+        - link "Página Energia solar 22 Energia solar Landing page" [ref=e220] [cursor=pointer]:
+          - /url: /portifolio/projetos/energia-solar
+          - img "Página Energia solar" [ref=e222]
+          - generic [ref=e223]:
+            - generic [ref=e224]: "22"
+            - heading "Energia solar" [level=3] [ref=e225]
+            - generic [ref=e226]: Landing page
+        - link "Página Tintas Nacional 23 Tintas Nacional Site institucional" [ref=e228] [cursor=pointer]:
+          - /url: /portifolio/projetos/home-web
+          - img "Página Tintas Nacional" [ref=e230]
+          - generic [ref=e231]:
+            - generic [ref=e232]: "23"
+            - heading "Tintas Nacional" [level=3] [ref=e233]
+            - generic [ref=e234]: Site institucional
+        - link "Página Desenvolvimento infantil 24 Desenvolvimento infantil Site institucional" [ref=e236] [cursor=pointer]:
+          - /url: /portifolio/projetos/pagina-inicial
+          - img "Página Desenvolvimento infantil" [ref=e238]
+          - generic [ref=e239]:
+            - generic [ref=e240]: "24"
+            - heading "Desenvolvimento infantil" [level=3] [ref=e241]
+            - generic [ref=e242]: Site institucional
+        - link "Página Presença digital 25 Presença digital Página de vendas" [ref=e244] [cursor=pointer]:
+          - /url: /portifolio/projetos/nicolas
+          - img "Página Presença digital" [ref=e246]
+          - generic [ref=e247]:
+            - generic [ref=e248]: "25"
+            - heading "Presença digital" [level=3] [ref=e249]
+            - generic [ref=e250]: Página de vendas
+        - link "Página Ansiedade 26 Ansiedade Página de vendas" [ref=e252] [cursor=pointer]:
+          - /url: /portifolio/projetos/dr
+          - img "Página Ansiedade" [ref=e254]
+          - generic [ref=e255]:
+            - generic [ref=e256]: "26"
+            - heading "Ansiedade" [level=3] [ref=e257]
+            - generic [ref=e258]: Página de vendas
+        - link "Página Nature Ambiental · LP 27 Nature Ambiental · LP Landing page" [ref=e260] [cursor=pointer]:
+          - /url: /portifolio/projetos/lp-desktop
+          - img "Página Nature Ambiental · LP" [ref=e262]
+          - generic [ref=e263]:
+            - generic [ref=e264]: "27"
+            - heading "Nature Ambiental · LP" [level=3] [ref=e265]
+            - generic [ref=e266]: Landing page
+        - link "Página Viagens por milhas 28 Viagens por milhas Página de captura" [ref=e268] [cursor=pointer]:
+          - /url: /portifolio/projetos/captura-milhas
+          - img "Página Viagens por milhas" [ref=e270]
+          - generic [ref=e271]:
+            - generic [ref=e272]: "28"
+            - heading "Viagens por milhas" [level=3] [ref=e273]
+            - generic [ref=e274]: Página de captura
+        - link "Página Do zero ao milheiro 29 Do zero ao milheiro Página de captura" [ref=e276] [cursor=pointer]:
+          - /url: /portifolio/projetos/do-zero-ao-milheiro
+          - img "Página Do zero ao milheiro" [ref=e278]
+          - generic [ref=e279]:
+            - generic [ref=e280]: "29"
+            - heading "Do zero ao milheiro" [level=3] [ref=e281]
+            - generic [ref=e282]: Página de captura
+        - link "Página Curso para mulheres 30 Curso para mulheres Página de vendas" [ref=e284] [cursor=pointer]:
+          - /url: /portifolio/projetos/desktop-b
+          - img "Página Curso para mulheres" [ref=e286]
+          - generic [ref=e287]:
+            - generic [ref=e288]: "30"
+            - heading "Curso para mulheres" [level=3] [ref=e289]
+            - generic [ref=e290]: Página de vendas
+        - link "Página Avocado Tech · Cases 31 Avocado Tech · Cases Landing page" [ref=e292] [cursor=pointer]:
+          - /url: /portifolio/projetos/desktop-a
+          - img "Página Avocado Tech · Cases" [ref=e294]
+          - generic [ref=e295]:
+            - generic [ref=e296]: "31"
+            - heading "Avocado Tech · Cases" [level=3] [ref=e297]
+            - generic [ref=e298]: Landing page
+        - link "Página Suplemento ortocálcio 32 Suplemento ortocálcio Advertorial" [ref=e300] [cursor=pointer]:
+          - /url: /portifolio/projetos/frame-1
+          - img "Página Suplemento ortocálcio" [ref=e302]
+          - generic [ref=e303]:
+            - generic [ref=e304]: "32"
+            - heading "Suplemento ortocálcio" [level=3] [ref=e305]
+            - generic [ref=e306]: Advertorial
+  - contentinfo [ref=e307]:
+    - generic [ref=e314]:
+      - paragraph [ref=e315]: Vamos conversar
+      - heading "Vamos criar algo único?" [level=2] [ref=e316]
+      - paragraph [ref=e319]: São cinco perguntas rápidas. Eu respondo com um caminho claro e um orçamento sem enrolação. Projetos a partir de R$ 5.000.
+      - generic [ref=e320]:
+        - link "Pedir orçamento" [ref=e321] [cursor=pointer]:
+          - /url: /portifolio/contato
+          - text: Pedir orçamento
+          - generic [aria-hidden] [ref=e322]: →
+        - link "marsdesigngrafico01@gmail.com" [ref=e323] [cursor=pointer]:
+          - /url: mailto:marsdesigngrafico01@gmail.com
+    - generic [ref=e324]:
+      - img "Mars Webdesigner" [ref=e325]
+      - navigation "Rodapé" [ref=e326]:
+        - link "Projetos" [ref=e327] [cursor=pointer]:
+          - /url: /portifolio/projetos
+        - link "Serviços" [ref=e328] [cursor=pointer]:
+          - /url: /portifolio/servicos
+        - link "Sobre" [ref=e329] [cursor=pointer]:
+          - /url: /portifolio/sobre
+        - link "Orçamento" [ref=e330] [cursor=pointer]:
+          - /url: /portifolio/contato
+      - paragraph [ref=e331]: © 2026 Mars Webdesigner
+      - button "Voltar ao topo ↑" [ref=e332] [cursor=pointer]

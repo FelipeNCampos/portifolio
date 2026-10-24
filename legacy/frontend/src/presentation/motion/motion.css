@@ -1,0 +1,87 @@
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hero-content { align-self: center; min-width: 0; }
+.hero-visual { display: grid; grid-template-rows: 330px auto; min-width: 0; }
+.hero .availability-card { position: relative; width: 100%; }
+.sculpture { position: relative; min-width: 0; }
+.sculpture-art { height: 100%; perspective: 1000px; pointer-events: none; }
+.sculpture-world {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: 164px;
+  height: 164px;
+  margin: -82px;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-35deg);
+}
+.sculpture-slab { position: absolute; inset: 0; transform-style: preserve-3d; }
+.slab-foundation { transform: translateZ(0); --slab-top: #253a52; --slab-side: #15273b; --slab-edge: #3c536b; }
+.slab-logic { transform: translateZ(72px); --slab-top: #ecb86d; --slab-side: #aa7737; --slab-edge: #ce974f; }
+.slab-experience { transform: translateZ(144px); --slab-top: #87b9aa; --slab-side: #497d6d; --slab-edge: #669b8b; }
+.slab-face { position: absolute; width: 164px; height: 164px; background: var(--slab-side); backface-visibility: hidden; }
+.face-top { background: var(--slab-top); transform: translateZ(16px); border: 1px solid rgb(255 255 255 / 25%); }
+.face-bottom { transform: rotateX(180deg) translateZ(16px); }
+.face-front, .face-back { top: 66px; height: 32px; }
+.face-front { transform: rotateX(-90deg) translateZ(82px); }
+.face-back { transform: rotateX(90deg) translateZ(82px); }
+.face-left, .face-right { left: 66px; width: 32px; background: var(--slab-edge); }
+.face-left { transform: rotateY(-90deg) translateZ(82px); }
+.face-right { transform: rotateY(90deg) translateZ(82px); }
+.sculpture-symbol { display: grid; place-items: center; height: 100%; color: #173c31; font: 700 60px ui-monospace, monospace; letter-spacing: -8px; padding-right: 8px; }
+.sculpture-shadow { position: absolute; top: 67%; left: 14%; width: 72%; height: 22%; border-radius: 50%; background: radial-gradient(ellipse, rgb(31 69 57 / 18%), transparent 68%); transform: rotate(-10deg); }
+.reveal-surface { display: flex; min-width: 0; }
+.reveal-surface > .project-card { flex: 1; }
+
+/* Only the public portfolio gets decorative movement. */
+@media (prefers-reduced-motion: no-preference) {
+  .sculpture-world { animation: sculpture-turn 4s var(--ease-in-out) 1; }
+  .slab-experience { animation: layer-experience 4s var(--ease-in-out) 1; }
+  .slab-logic { animation: layer-logic 4s var(--ease-in-out) 1; }
+  .hero-content > * { animation: hero-enter 600ms var(--ease-out) both; }
+  .hero-content > :nth-child(2) { animation-delay: 60ms; }
+  .hero-content > :nth-child(3) { animation-delay: 120ms; }
+  .hero-content > :nth-child(4) { animation-delay: 180ms; }
+  .hero .button { transition: transform 160ms var(--ease-out); }
+  .hero .button:active { transform: scale(.97); }
+  .project-card { transition: transform 200ms var(--ease-out); transform-origin: center bottom; }
+  @media (hover: hover) and (pointer: fine) {
+    .project-card:hover { transform: perspective(1000px) translateY(-5px) rotateX(2deg) rotateY(-2deg); }
+    .hero .button:hover { transform: translateY(-2px); }
+  }
+}
+.sculpture[data-offscreen="true"] *,
+.sculpture[data-hidden="true"] * { animation-play-state: paused; }
+
+@keyframes sculpture-turn {
+  0%, 100% { transform: rotateX(58deg) rotateZ(-35deg); }
+  40% { transform: rotateX(66deg) rotateZ(-17deg); }
+  70% { transform: rotateX(53deg) rotateZ(-43deg); }
+}
+@keyframes layer-experience {
+  0%, 100% { transform: translateZ(144px); }
+  40% { transform: translateZ(175px); }
+  70% { transform: translateZ(154px); }
+}
+@keyframes layer-logic {
+  0%, 100% { transform: translateZ(72px); }
+  40% { transform: translateZ(90px); }
+  70% { transform: translateZ(77px); }
+}
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.hero .button:focus-visible { outline: 3px solid #225e4b; outline-offset: 4px; }
+@media (max-width: 760px) {
+  .hero-visual { grid-template-rows: 290px auto; }
+  .hero .availability-card { margin-top: 0; }
+  .sculpture-world { transform: rotateX(58deg) rotateZ(-35deg) scale(.85); }
+  .sculpture-world { animation: none; }
+}

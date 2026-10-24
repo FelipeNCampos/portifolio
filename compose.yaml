@@ -1,0 +1,41 @@
+name: portfolio
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+      target: production
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-8080}:8080"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - application
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+      target: production
+    environment:
+      APP_ENV: production
+      APP_DEMO_MODE: ${APP_DEMO_MODE:-false}
+      DATABASE_PATH: /data/contracts.sqlite3
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+      GITHUB_USERNAME: ${GITHUB_USERNAME:-FelipeNCampos}
+    volumes:
+      - backend-data:/data
+    # No host port: reached only through the frontend or the Docker network.
+    networks:
+      - application
+    restart: unless-stopped
+
+networks:
+  application:
+    driver: bridge
+
+volumes:
+  backend-data:

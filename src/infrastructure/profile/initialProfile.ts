@@ -1,0 +1,53 @@
+/** Conteúdo inicial do currículo e informações fornecidas pelo proprietário. */
+export const initialProfile = {
+  name: 'Felipe Nunes Campos', shortName: 'Felipe Campos', firstName: 'Felipe', initials: 'FC',
+  location: 'Goiânia, GO', role: 'Desenvolvedor Full Stack',
+  headline: 'Software, automação e integrações.',
+  introduction: 'Desenvolvimento full stack com Python/Django, automação de processos e soluções web orientadas a negócios.',
+  summary: 'Estudante de Engenharia de Software na UFG, com experiência prática em desenvolvimento full stack, backend com Python/Django e automação de processos. Atuação em sistemas SaaS, bots, scraping, dashboards e integrações, com foco em arquitetura limpa, escalabilidade e produtividade operacional.',
+  email: 'felipe.n.cmp@gmail.com', phone: '+55 (62) 99456-6196', phoneHref: 'tel:+5562994566196',
+  whatsappUrl: 'https://wa.me/5562994566196',
+  github: 'https://github.com/FelipeNCampos',
+  education: {
+    institution: 'Universidade Federal de Goiás (UFG)', degree: 'Bacharelado em Engenharia de Software',
+    period: 'Fev. 2024 a jul. 2028', note: 'Em andamento, com conclusão prevista para julho de 2028.',
+    continuousLearning: 'Aprendizado contínuo com cursos e treinamentos online, complementando a formação acadêmica.',
+  },
+  training: { title: 'Cloud Computing 101', issuer: 'AWS Educate', note: 'Treinamento identificado pelo selo apresentado no currículo.' },
+  languages: [{ name: 'Português', level: 'Nativo' }, { name: 'Inglês', level: 'Avançado' }],
+  experiences: [
+    { organization: 'Contra Estatística', context: 'Presencial · contrato por projeto', responsibilities: [
+      'Desenvolvimento e evolução de funcionalidades da plataforma educly.app, com sustentação do produto.',
+      'Criação de automações para eficiência operacional e redução de tarefas manuais.',
+      'Implementação de workflows com n8n para integração e orquestração de processos.',
+    ] },
+    { organization: '99Freelas / Projetos Autônomos', context: 'Remoto · jan. 2024 a atual', responsibilities: [
+      'Bots e web scraping com Python, Selenium e Regex para extração e tratamento de dados.',
+      'Dashboards integrados com JavaScript e Google Sheets para acompanhamento de métricas.',
+      'Configuração de ambientes Linux e apoio à manutenção de infraestrutura e servidores.',
+      'Soluções sob demanda para automação, coleta de dados e produtividade operacional.',
+    ] },
+  ],
+  projects: [
+    { id: 'condominios', category: 'SaaS / Desenvolvimento solo', title: 'Administração de condomínios no Reino Unido',
+      description: 'Desenvolvimento end-to-end de um SaaS que centraliza processos operacionais em um painel web, com foco em operação e rastreabilidade.',
+      details: ['Controle de ponto, tarefas operacionais, leituras de consumo e rotinas de segurança.', 'Arquitetura desacoplada com backend Django/Python e API RESTful.'],
+      technologies: 'Python · Django · API RESTful' },
+    { id: 'coleta-corporativa', category: 'Dados corporativos / Desenvolvimento solo', title: 'Identidade profissional e coleta de dados',
+      description: 'Plataforma web para gestão de identidade profissional e emissão de carteirinhas, com cadastro automatizado a partir de dados pré-existentes.',
+      details: ['Coleta de assinaturas digitais, fotos e documentos.', 'Painéis por perfil de acesso para gerentes e empresas acompanharem o status das coletas.'],
+      technologies: 'Full Stack · Perfis de acesso · Automação' },
+    { id: 'crm', category: 'CRM / Desenvolvimento solo', title: 'Gestão comercial para micronegócios',
+      description: 'Sistema para gestão de leads, clientes, funil de vendas e atendimento, organizado por domínios de vendas, atendimento, financeiro e relatórios.',
+      details: ['Backend Python/Django com API REST para integração entre painéis e serviços internos.', 'Automações para distribuição de leads, atualização de status comercial e indicadores operacionais.'],
+      technologies: 'Python · Django · API REST' },
+  ],
+  skills: [
+    { category: 'Backend', values: ['Python', 'Go', 'Java', 'FastAPI', 'Django', 'Swagger', 'Gin'] },
+    { category: 'Frontend', values: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
+    { category: 'Automação', values: ['Selenium', 'Regex', 'n8n', 'Web scraping'] },
+    { category: 'Dados', values: ['Pandas', 'SQLAlchemy', 'Pydantic', 'Google Sheets'] },
+    { category: 'Infraestrutura', values: ['Docker', 'GitFlow', 'Git/GitHub', 'Linux'] },
+    { category: 'Metodologias', values: ['Kanban', 'Metodologias ágeis'] },
+  ],
+} as const
