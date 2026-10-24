@@ -45,9 +45,9 @@ export const initialProfile = {
   skills: [
     { category: 'Backend', values: ['Python', 'Go', 'Java', 'FastAPI', 'Django', 'AWS SDK/CLI'] },
     { category: 'Frontend', values: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
-    { category: 'Automação', values: ['Selenium', 'Scrapy', 'n8n', 'AWS Lambda'] },
-    { category: 'Dados', values: ['Postgresql', 'MongoDB', 'Pandas', 'SQL'] },
-    { category: 'Infraestrutura', values: ['Docker', 'Kafka', 'Git/GitHub', 'Linux', 'AWS EC2/VPC/S3'] },
+    { category: 'Automação', values: ['Selenium', 'Scrapy', 'n8n', 'AWS Lambda', 'AWS Step Functions'] },
+    { category: 'Dados', values: ['Postgresql', 'MongoDB', 'Pandas', 'SQL', 'AWS SQS/SNS', 'AWS DynamoDB/RDS', 'AWS ElastiCache'] },
+    { category: 'Infraestrutura', values: ['Docker', 'Kafka', 'Git/GitHub', 'Linux', 'AWS EC2/VPC/S3/IAM'] },
     { category: 'Metodologias', values: ['ISO 9001', 'ISO/IEC 12207'] },
   ],
 } as const
