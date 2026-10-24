@@ -26,7 +26,7 @@ export function App() {
       <section className="hero" id="inicio" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow role-node" ref={roleRef}>ENGENHEIRO FULLSTACK</p>
-          <h1 id="hero-title">Arquitetura que permanece.</h1>
+          <h1 id="hero-title">Arquitetura que edifica.</h1>
           <p className="intro">
             Contruindo sistemas fullstack seguros <br/>que aguentam fluxos reais do mercado <br/>entregando <i>mais valor ao seu produto</i>.
           </p>
